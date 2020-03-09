@@ -29,6 +29,7 @@
 \usepackage{mathtools}			% more math symbols
 \usepackage{appendixnumberbeamer}	% appendix slides (backup slides)
 \usepackage{pgfpages}			% separate note slides
+\usepackage{listings}
 
 % biblatex
 \usepackage[backend=bibtex,
@@ -53,6 +54,24 @@
 
 \captionsetup[figure]{labelfont={color=maincolor}}
 \captionsetup[table]{labelfont={color=maincolor}}
+
+% tikz
+\setcounter{secnumdepth}{4}
+\usetikzlibrary{through, shapes, calc, arrows, positioning, arrows.meta, shadows, er, spy, external, decorations} 
+\tikzstyle{neuron}=[draw,circle,minimum size=20pt,inner sep=0pt, fill=white]
+\tikzstyle{stateTransition}=[thick]
+\tikzstyle{learned}=[text=red]
+
+\tikzset{basic/.style={draw,fill=blue!20,text width=1em,text badly centered}}
+\tikzset{input/.style={basic,circle,fill=empheqbackground}}
+\tikzset{weights/.style={basic,rectangle,fill=empheqbackground!90}}
+\tikzset{functions/.style={basic,circle,fill=empheqbackground!80}}
+
+% listings
+\lstset{language=Python, 
+		basicstyle=\ttfamily,
+		backgroundcolor=\color{empheqbackground}
+}
 
 %empheq equation color box
 \newlength\mytemplen
